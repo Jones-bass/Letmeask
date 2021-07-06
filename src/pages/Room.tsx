@@ -50,7 +50,7 @@ export function Room() {
 
   async function handleLikeQuestion(
     questionId: string,
-    likeId: string,
+    likeId: string | undefined
   ) {
     if (likeId) {
       await database
@@ -107,7 +107,7 @@ export function Room() {
               content={question.content}
               author={question.author}
               isAnswered={question.isAnswered}
-              isHighlighted={question.isHighLighted}
+              isHighlighted={question.isHighlighted}
               key={question.id}
             >
               {!question.isAnswered && (

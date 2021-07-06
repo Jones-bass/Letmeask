@@ -75,7 +75,7 @@ export function AdminRoom() {
               content={question.content}
               author={question.author}
               isAnswered={question.isAnswered}
-              isHighlighted={question.isHighLighted}
+              isHighlighted={question.isHighlighted}
               key={question.id}
             >
               {!question.isAnswered && (
