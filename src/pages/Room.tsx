@@ -1,16 +1,16 @@
 import { FormEvent, useState } from 'react';
-
 import { useParams } from 'react-router-dom';
 import { Button } from '../components/Button';
 import { Question } from '../components/Question';
-
 import { RoomCode } from '../components/RoomCode';
-import logoImg from '../assets/images/logo.svg';
-
-import '../styles/room.scss';
 import { useAuth } from '../hooks/useAuth';
 import { database } from '../services/firebase';
 import { useRoom } from '../hooks/useRoom';
+
+import logoImg from '../assets/images/logo.svg';
+
+import '../styles/room.scss';
+
 
 type RoomParams = {
   id: string;
@@ -50,7 +50,7 @@ export function Room() {
 
   async function handleLikeQuestion(
     questionId: string,
-    likeId: string | undefined
+    likeId: string,
   ) {
     if (likeId) {
       await database
@@ -81,7 +81,7 @@ export function Room() {
           <textarea
             value={newQuestion}
             onChange={(event) => setNewQuestion(event.target.value)}
-            placeholder="O que você quer pergutar"
+            placeholder="O que você quer perguntar"
           />
 
           <div className="form-footer">

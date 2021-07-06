@@ -1,7 +1,7 @@
  
 import { useParams } from 'react-router-dom';
 import { Button } from '../components/Button';
-import { ModalDelete } from '../components/ModalDelete';
+import { ModalDelete } from '../components/ModalDeleteRoom';
 import { ModalCloseRoom } from '../components/ModalCloseRoom';
 
 import { Question } from '../components/Question';
@@ -75,7 +75,7 @@ export function AdminRoom() {
               content={question.content}
               author={question.author}
               isAnswered={question.isAnswered}
-              isHighlighted={question.isHighlighted}
+              isHighlighted={question.isHighLighted}
               key={question.id}
             >
               {!question.isAnswered && (

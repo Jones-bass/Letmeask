@@ -1,3 +1,4 @@
+
 import { ReactNode } from 'react';
 import '../styles/question.scss';
 import cx from 'classnames';
@@ -38,4 +39,4 @@ export function Question({
       </footer>
     </div>
   );
-}
+  }
